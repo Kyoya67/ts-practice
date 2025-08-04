@@ -1,3 +1,21 @@
-const message: string = "Hello World";
+type User = {
+  name: string;
+  age: number;
+};
 
-console.log(message);
+const john: User = {
+  name: "John",
+  age: 30,
+//   email: "john@example.com",
+};
+
+const jane = {
+  name: "Jane",
+  age: 25,
+  email: "jane@example.com",
+};
+
+const jane2 : User = jane;
+
+console.log(john);
+console.log(jane2);
