@@ -14,7 +14,7 @@ const articles = [
   },
 ];
 
-console.log("=== オブジェクト配列の分割代入の実験 ===");
+console.log("== オブジェクト配列の分割代入の実験 ==");
 
 const [{ title, description }] = articles;
 console.log("title", title);
