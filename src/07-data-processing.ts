@@ -18,7 +18,7 @@ for (const line of lines) {
     const[name, ageString, premiumUserSring] = line.split(',');
     const age = Number(ageString);
     const premiumUser = premiumUserSring === "true" ? true : false;
-    users.push({
+    users.unshift({
         name,
         age,
         premiumUser
@@ -33,3 +33,26 @@ for (const user of users) {
     }
 }
 
+
+console.log("========map version========")
+
+const users2: User[] = data.split('\n')
+.filter(line => line !== '')
+.map(line => {
+    const[name, ageString, premiumUserSring] = line.split(',');
+    const age = Number(ageString);
+    const premiumUser = premiumUserSring === "true" ? true : false;
+    return {
+        name,
+        age,
+        premiumUser
+    }
+})
+
+for (const user of users2) {
+    if (user.premiumUser) {
+        console.log(`${user.name} (${user.age}歳)はプレミアムユーザーです。`);
+    } else {
+        console.log(`${user.name} (${user.age}歳)はプレミアムユーザーではありません。`);
+    }
+}
