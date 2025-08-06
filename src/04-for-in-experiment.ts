@@ -1,5 +1,5 @@
 console.log("1. オブジェクトでの for...in:");
-const person = {
+export const person = {
     name: "kyoya67",
     age: 25,
     city: "Tokyo",

@@ -1,12 +1,12 @@
 // 配列操作の実験
-type UserWithDetails = {
+export type UserWithDetails = {
   name: string;
   age: number;
   sex: "male" | "female";
   place: string;
 };
 
-const users: UserWithDetails[] = [
+export const users: UserWithDetails[] = [
   {
     name: "John",
     age: 30,

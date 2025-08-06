@@ -1,5 +1,5 @@
 // 分割代入の実験
-const articles = [
+export const articles = [
   {
     title: "title1",
     description: "description1",

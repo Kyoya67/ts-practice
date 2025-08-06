@@ -1,4 +1,4 @@
-const result = "Hello, aaaabbbbbccc world! abc".match(/(a+)b+c/);
+export const result = "Hello, aaaabbbbbccc world! abc".match(/(a+)b+c/);
 
 if (result) {
     console.log(result[0]);
@@ -7,7 +7,7 @@ if (result) {
 
 console.log("=".repeat(50));
 
-const result2 = "Hello, aaaabbbbbccc world! abc".match(/a(?<domodo>b+)c/);
+export const result2 = "Hello, aaaabbbbbccc world! abc".match(/a(?<domodo>b+)c/);
 
 if (result2 !== null) {
     console.log(result2.groups);
