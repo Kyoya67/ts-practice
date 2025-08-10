@@ -1,27 +1,27 @@
-type HasName = {
+export type HasName = {
     name: string;
 }
 
-type HasNameAndAge = {
+export type HasNameAndAge = {
     name: string;
     age: number;
 }
 
-const fromAge = (age: number):  HasNameAndAge => ({
+export const fromAge = (age: number):  HasNameAndAge => ({
     name: "John",
     age
 });
 
-const f: (age: number) => HasName = fromAge;
-const obj: HasName = f(100);
+export const f: (age: number) => HasName = fromAge;
+export const obj: HasName = f(100);
 
 console.log(obj);
 
 console.log("=====================================")
 
-const showName = (obj: HasName) => {
+export const showName = (obj: HasName) => {
     console.log(obj.name);
 }
 
-const g: (obj: HasNameAndAge) => void = showName;
+export const g: (obj: HasNameAndAge) => void = showName;
 console.log(g({name: "domo", age: 200}));

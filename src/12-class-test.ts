@@ -1,4 +1,4 @@
-class User {
+export class User {
     constructor (public name: string, private age: number) {}
 
     public isAdult(): boolean{
@@ -10,10 +10,10 @@ class User {
     }
 }
 
-const Josh = new User("Josh", 12);
+export const Josh = new User("Josh", 12);
 console.log(Josh.isAdult());
 
-const UserExp = class{
+export const UserExp = class{
     public name: string;
     private age: number;
 
@@ -27,5 +27,5 @@ const UserExp = class{
     }
 }
 
-const Takumu = new UserExp("Takumu", 23);
+export const Takumu = new UserExp("Takumu", 23);
 console.log(Takumu.isAdult());

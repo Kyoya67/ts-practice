@@ -1,13 +1,13 @@
-type Human = {
+export type Human = {
     name: string;
     age: number;
 }
 
-type returnObj = {
+export type returnObj = {
     bmi: number;
 }
 
-const calcBmi = ({
+export const calcBmi = ({
     weight, height
 }: {
     weight: number;
@@ -16,7 +16,7 @@ const calcBmi = ({
     bmi: weight / height ** 2;
 });
 
-const calcBmi2 = ({
+export const calcBmi2 = ({
     weight, height
 }: {
     weight: number;

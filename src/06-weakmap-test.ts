@@ -1,4 +1,5 @@
-function getMemoryUsage() {
+// メモリ使用量を取得する関数
+export function getMemoryUsage() {
     if (typeof process !== 'undefined') {
         var memUsage = process.memoryUsage();
         return {
