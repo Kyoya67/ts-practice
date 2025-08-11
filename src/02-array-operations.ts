@@ -41,3 +41,7 @@ users.push({
 });
 
 console.log("users after", users); 
+
+const variousTypeArray = [23, "domo", false];
+
+console.log(variousTypeArray);
