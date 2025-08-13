@@ -13,7 +13,7 @@ export const calcBmi = ({
     weight: number;
     height: number;
 }): returnObj => ({
-    bmi: weight / height ** 2;
+    bmi: weight / height ** 2,
 });
 
 export const calcBmi2 = ({
