@@ -23,6 +23,11 @@ const choya: User = {
     name: "choya"
 };
 
+const kim: User = {
+    tag: "human",
+    name: "kim"
+}
+
 console.log(getName(choya));
 
 function getNamesIfAllHuman(users: readonly User[]): string[] | undefined {
@@ -45,15 +50,27 @@ const humanUsers: User[] = [
 
 console.log(getNamesIfAllHuman(humanUsers));
 
-const animalUsers: User[] = [
-    {
-        tag: "animal",
-        species: "dog"
-    },
-    {
-        tag: "animal",
-        species: "cat"
-    }
-]
+const animalUsers: User[] = [choya, kim];
 
 console.log(getNamesIfAllHuman(animalUsers));
+
+function getOneUserName(user1?: Human, user2?: Human): string | undefined {
+    if (user1 === undefined && user2 === undefined) {
+        return undefined;
+    }
+    if (user1 !== undefined) {
+        return user1.name;
+    }
+    return user2!.name;
+}
+
+console.log(getOneUserName(choya, kim));
+
+function getOneUserName2(user1?: Human, user2?: Human): string | undefined {
+    return user1?.name ?? user2?.name;
+}
+
+console.log(getOneUserName2(choya, kim));
+console.log(getOneUserName2(choya, undefined));
+console.log(getOneUserName2(undefined, kim));
+console.log(getOneUserName2(undefined, undefined));
