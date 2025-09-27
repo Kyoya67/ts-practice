@@ -14,7 +14,6 @@ const tama: Animal = {
     age: 3,
 }
 
-export { tama }
-export type { Animal }  // 型のエクスポート
-
+export type { Animal, tama }  // ブルーベリー本の書き方
+    
 export { domodomo }

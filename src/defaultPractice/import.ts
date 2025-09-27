@@ -1,4 +1,5 @@
-import yaa, { tama, domodomo } from "./export.ts"
+import yaa, { domodomo } from "./export.ts"
+import type { tama, Animal } from "./export.ts"
 
 console.log(yaa());
 console.log(domodomo);
@@ -6,6 +7,6 @@ console.log(domodomo);
 const tama2: typeof tama = {
     name: "Tama2",
     age: 3,
-}
+};
 
 console.log(tama2);
